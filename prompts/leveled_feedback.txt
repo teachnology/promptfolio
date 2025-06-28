@@ -1,1 +1,47 @@
-"**Four Level Python Code Analysis:**\n```python\n{{code}}\n```\n\n**Feedback Classification Guide:**\n🚨 **TARGETED** - Syntax errors that prevent code from running (missing colons, indentation, typos)\n🤔 **TACTICAL** - Style issues and poor practices (variable names, code organization)\n🏗️ **STRATEGIC** - Structural problems needing refactoring (algorithm choice, data structures)\n💡 **CONCEPTUAL** - Logic errors and wrong understanding (algorithm logic, edge cases)\n\n**Analysis Instructions:**\n1. **Identify the Primary Issue Level:** Determine which of the four levels best describes the main problem\n2. **Provide Targeted Feedback:** Use the format '[ICON] [LEVEL] - [Brief explanation]'\n3. **Ask Guiding Questions:** Pose 2-3 questions that help the student discover the solution\n4. **Educational Focus:** Give hints and guidance, never complete code solutions\n5. **Keep It Concise:** Limit response to 150 words or less\n\n**Response Format Example:**\n🚨 TARGETED - Missing colon after function definition. Questions: What punctuation is needed after 'def function_name()'? How does Python know where a function definition ends? Try adding the missing punctuation and see what happens.\n\n**Remember:** Focus on teaching concepts and problem-solving approaches, not providing direct answers."
+"**Four Level Python Code Analysis:**\n```python\n{{code}}\n```\n\n**Feedback Classification Guide:**\n🚨 **TARGETED** - Syntax errors that prevent code from running (missing colons, indentation, typos)\n🤔 **TACTICAL** - Style issues and poor practices (variable names, code organization)\n🏗️ **STRATEGIC** - Structural problems needing refactoring (algorithm choice, data structures)\n💡 **CONCEPTUAL** - Logic errors and wrong understanding (algorithm logic, edge cases)\n\n**Analysis Instructions:**\n1. **Identify the Primary Issue Level:** Determine which of the four levels best describes the main problem\n2. **Provide Targeted Feedback:** Use the format '[ICON] [LEVEL] - [Brief explanation]'\n3. **Ask Guiding Questions:** Pose 2-3 questions that help the student discover the solution\n4. **Educational Focus:** Give hints and guidance, never complete code solutions\n5. **Keep It Concise:** Limit response to 150 words or less\n\n**Response Format Example:**\n🚨 TARGETED - Missing colon after function definition. Questions: What punctuation is needed after 'def function_name()'? How does Python know where a function definition ends? Try adding the missing punctuation and see what happens.\n\n**Remember:** Focus on teaching concepts and problem-solving approaches, not providing direct answers."**Leveled Python Code Feedback:**
+
+{{problem_description}}
+
+```python
+{{code}}
+```
+
+{{code_output}}
+
+**Feedback Classification Guide:**
+✅ **EXCELLENT** - Code works correctly and demonstrates good understanding
+🚨 **TARGETED** - Syntax errors that prevent code from running (missing colons, indentation, typos)
+🤔 **TACTICAL** - Style issues and poor practices (variable names, code organization)
+🏗️ **STRATEGIC** - Structural problems needing refactoring (algorithm choice, data structures)
+💡 **CONCEPTUAL** - Logic errors and wrong understanding (algorithm logic, edge cases)
+
+**Analysis Instructions:**
+1. **First Check Correctness:** If code works correctly and produces expected output, use ✅ EXCELLENT
+2. **Identify Issue Level:** For problems, determine which of the four issue levels applies
+3. **Provide Targeted Feedback:** Use the format '[ICON] [LEVEL] - [Brief explanation]'
+4. **Ask Guiding Questions:** For problems, pose questions that help discovery. For correct code, suggest improvements or extensions
+5. **Educational Focus:** Give hints and guidance, never complete code solutions
+6. **Keep It Structured:** Use 2-5 complete sentences based on complexity:
+   - EXCELLENT: 2-4 sentences (celebrate success + suggest extensions)
+   - TARGETED: 2-3 sentences (simple fixes)
+   - TACTICAL: 2-4 sentences (explanations + questions)
+   - STRATEGIC: 3-5 sentences (complex guidance)
+   - CONCEPTUAL: 3-5 sentences (deep concept exploration)
+
+**Response Format Examples:**
+
+✅ EXCELLENT - Great job! Your function works correctly and produces the expected output. How might you optimize this for very large inputs? Can you think of edge cases that should be tested?
+
+🚨 TARGETED - Missing colon after function definition. What punctuation is needed after 'def function_name()'? Try adding the missing punctuation and see what happens.
+
+🤔 TACTICAL - Your logic works perfectly, but variable names like 'x' and 'y' make the code hard to follow. What would make these names more descriptive for other programmers? How might clear naming help you debug later?
+
+🏗️ STRATEGIC - This recursive approach works correctly but may be inefficient for large inputs. Can you think of a way to solve this without calling the same function multiple times? What patterns do you notice that might help optimize this? Consider how you might store previous results.
+
+💡 CONCEPTUAL - Your current solution handles the basic case well, but consider what happens with edge cases like n=0 or negative numbers. What should fibonacci(0) return according to the mathematical definition? How would you handle these special cases while maintaining the core logic?
+
+**Remember:** 
+- Always celebrate correct solutions before suggesting improvements
+- Focus on teaching concepts and problem-solving approaches through complete, well-structured sentences
+- For working code, guide toward optimization, edge cases, and deeper understanding
+- For problems, guide discovery rather and never provide direct answers
