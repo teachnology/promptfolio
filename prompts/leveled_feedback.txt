@@ -1,4 +1,4 @@
-**Leveled Feedback Analysis**
+**Smart Python Feedback Analysis**
 
 {{problem_description}}
 
@@ -12,26 +12,27 @@
 **Your Task:**
 Provide ONE accurate classification with brief explanation. Follow this exact process:
 
-**Step 1: Quick Assessment**
-- Does code have syntax errors? → 🚨 TARGETED
-- Does code run but output doesn't match problem requirements? → 🤔 TACTICAL  
-- Does code have wrong algorithm/logic? → 🏗️ STRATEGIC or 💡 CONCEPTUAL
-- Does code work perfectly and meet all requirements? → ✅ EXCELLENT
+**Step 1: Error Type Analysis**
+FIRST check execution status:
+- NameError, SyntaxError, IndentationError, TypeError (missing colon, undefined variables) → 🚨 TARGETED
+- Code runs successfully but output doesn't match problem requirements → 🤔 TACTICAL  
+- Code runs but uses wrong algorithm/approach → 🏗️ STRATEGIC or 💡 CONCEPTUAL
+- Code works perfectly and meets all stated requirements → ✅ EXCELLENT
 
 **Step 2: Response Format**
 Write exactly: [EMOJI] [LEVEL] - [one clear sentence]. [optional: one focused question]
 
-**Critical Rules:**
-- Keep under 50 words total
+**Critical Classification Rules:**
+- ANY execution error (NameError, SyntaxError, etc.) = 🚨 TARGETED (never TACTICAL)
+- Algorithm correct but wrong parameters/function calls = 🤔 TACTICAL
+- Only use ✅ EXCELLENT when output perfectly matches ALL problem requirements
+- Keep response under 80 words total
 - Never provide code solutions
-- Focus on the most important issue only
-- If algorithm is correct but parameters/usage wrong → 🤔 TACTICAL
-- Only use ✅ EXCELLENT when output perfectly matches problem requirements
 
 **Examples:**
 
-🚨 TARGETED - Missing colon after function definition.
+🚨 TARGETED - NameError: variable 'n' is not defined.
 🤔 TACTICAL - Your fibonacci function works correctly, but check what parameter matches the "smaller than 50" requirement.
-🏗️ STRATEGIC - Consider a more efficient approach that builds numbers sequentially rather than recalculating.
-💡 CONCEPTUAL - The range should start from 1 since triangle rows are numbered starting at 1.
+🏗️ STRATEGIC - Consider a more efficient approach that builds numbers sequentially.
+💡 CONCEPTUAL - The range should start from 1 for triangle rows.
 ✅ EXCELLENT - Perfect implementation that produces exactly the required output.
