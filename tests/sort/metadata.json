@@ -2,48 +2,10 @@
   "id": "sort",
   "title": "Bubble Sort",
   "description": "Implement bubble sort algorithm to sort a list of integers in ascending order",
-  "difficulty": "medium",
-  "tags": ["sorting", "algorithms", "loops", "arrays"],
-  "function_name": "bubble_sort",
-  "function_signature": "def bubble_sort(arr: list) -> list:",
-  "requirements": [
-    "Function must accept a list of integers as parameter",
-    "Return a new sorted list (do not modify the original list)",
-    "Use bubble sort algorithm",
-    "Handle empty lists and single element lists"
-  ],
-  "test_cases": [
-    {
-      "input": "[3, 1, 4, 1, 5, 9, 2, 6]",
-      "expected": "[1, 1, 2, 3, 4, 5, 6, 9]",
-      "description": "Sort regular integer list"
-    },
-    {
-      "input": "[]",
-      "expected": "[]",
-      "description": "Handle empty list"
-    },
-    {
-      "input": "[1]",
-      "expected": "[1]",
-      "description": "Handle single element list"
-    },
-    {
-      "input": "[5, 4, 3, 2, 1]",
-      "expected": "[1, 2, 3, 4, 5]",
-      "description": "Sort reverse ordered list"
-    }
-  ],
   "hints": [
     "Use nested loops",
     "Outer loop controls sorting rounds",
     "Inner loop compares and swaps adjacent elements",
     "Make sure not to modify the original list"
-  ],
-  "learning_objectives": [
-    "Understand sorting algorithm principles",
-    "Master nested loop usage",
-    "Learn list operations and slicing",
-    "Understand algorithm time complexity"
   ]
 } 

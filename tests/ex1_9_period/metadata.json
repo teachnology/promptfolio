@@ -1,0 +1,10 @@
+{
+  "id": "ex1_9_period",
+  "title": "Kepler's third law (planetary period)",
+  "description": "Write a Python function `period` that calculates the period of a planet using Kepler's third law: P^2 = 4*pi^2/(G*(M+m))*a^3. Then use it to compute the period of Earth and Mars, and how many Earth years are in 10 Mars years.",
+  "hints": [
+    "Remember to use the correct formula for Kepler's third law.",
+    "Use the provided constants for G, M, and the masses/distances.",
+    "Return the period in seconds, and check units carefully."
+  ]
+} 

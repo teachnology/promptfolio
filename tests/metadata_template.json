@@ -1,0 +1,10 @@
+{
+  "id": "exercise_name",
+  "title": "Exercise Title",
+  "description": "Brief description of what the exercise requires",
+  "hints": [
+    "Hint 1: First suggestion for improvement",
+    "Hint 2: Second suggestion for improvement",
+    "Hint 3: Third suggestion for improvement"
+  ]
+} 

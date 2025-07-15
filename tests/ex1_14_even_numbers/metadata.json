@@ -1,0 +1,10 @@
+{
+  "id": "ex1_14_even_numbers",
+  "title": "Create a list of even numbers from 0 to n",
+  "description": "Write a function `even_numbers(n)` using a for loop, which generates and returns a list of all even numbers from 0 to n (not including n if n is odd).",
+  "hints": [
+    "Use a for loop and check if the current number is even.",
+    "Start from 0 and increment by 2.",
+    "Do not use list comprehensions for this exercise."
+  ]
+} 

@@ -1,0 +1,10 @@
+{
+  "id": "ex1_16_distance",
+  "title": "Position of the ball in a vertical motion",
+  "description": "Write a function `distance` that returns a list of y values calculated using the formula: y(t) = v0*t - 0.5*g*t^2, for n values of t ranging from t_start to t_end. Use keyword arguments v0=6.0 and g=9.81.",
+  "hints": [
+    "Use a for loop to generate n values of t between t_start and t_end.",
+    "Apply the formula for each t and store the result in a list.",
+    "Return the list of y values."
+  ]
+} 
