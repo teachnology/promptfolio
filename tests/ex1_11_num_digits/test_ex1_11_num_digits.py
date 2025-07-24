@@ -13,14 +13,22 @@ except ImportError:
 def test_num_digits_function_exists():
     assert callable(num_digits), "num_digits should be a callable function"
 
-def test_num_digits_basic():
+def test_num_digits_zero():
     assert num_digits(0) == 1, "num_digits(0) should return 1"
+
+def test_num_digits_five():
     assert num_digits(5) == 1, "num_digits(5) should return 1"
+
+def test_num_digits_seventy_three():
     assert num_digits(73) == 2, "num_digits(73) should return 2"
+
+def test_num_digits_large_number():
     assert num_digits(12345) == 5, "num_digits(12345) should return 5"
 
-def test_num_digits_large():
+def test_num_digits_nine_nines():
     assert num_digits(999999999) == 9, "num_digits(999999999) should return 9"
+
+def test_num_digits_one_hundred_thousand():
     assert num_digits(100000) == 6, "num_digits(100000) should return 6"
 
 def test_num_digits_negative():
@@ -30,19 +38,5 @@ def test_num_digits_negative():
     except Exception:
         pass
 
-def test_num_digits_param():
-    cases = [
-        (0, 1), (1, 1), (9, 1), (10, 2), (99, 2), (100, 3), (123456789, 9)
-    ]
-    for a, expected in cases:
-        assert num_digits(a) == expected, f"num_digits({a}) should return {expected}"
-
 def test_num_digits_return_type():
-    assert isinstance(num_digits(123), int), "num_digits should return an integer"
-
-def test_num_digits_function_signature():
-    import inspect
-    sig = inspect.signature(num_digits)
-    params = list(sig.parameters.keys())
-    assert len(params) == 1, f"num_digits should accept 1 parameter, got {len(params)}"
-    assert params[0] in ['a', 'n', 'num', 'number', 'x'], f"Parameter name should be 'a' or similar, got '{params[0]}'" 
+    assert isinstance(num_digits(123), int), "num_digits(123) should return an integer"

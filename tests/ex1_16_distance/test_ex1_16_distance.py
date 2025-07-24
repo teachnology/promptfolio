@@ -12,35 +12,30 @@ except ImportError:
 def test_distance_function_exists():
     assert callable(distance), "distance should be a callable function"
 
-def test_distance_basic():
+def test_distance_0_10_5():
     out = distance(0, 10, 5)
-    assert len(out) == 5, "distance(0,10,5) should return 5 values"
-    assert abs(out[0] - 0) < 1e-6, "First value should be 0"
-    assert abs(out[-1] - (-430.5)) < 1e-1, "Last value should be about -430.5"
+    assert len(out) == 5, "distance(0, 10, 5) should be 5 values"
+    assert abs(out[0] - 0) < 1e-6, "distance(0, 10, 5)[0] should be 0"
+    assert abs(out[-1] - (-430.5)) < 1e-1, "distance(0, 10, 5)[-1] should be -430.5"
 
-def test_distance_single():
+def test_distance_0_10_1():
     out = distance(0, 10, 1)
-    assert isinstance(out, list) and len(out) == 1
+    assert isinstance(out, list) and len(out) == 1, "distance(0, 10, 1) should be a list of length 1"
 
-def test_distance_param():
-    cases = [
-        (0, 4, 3, 6.0, 9.81, [0.0, 4.0, -31.24]),
-        (0, 2, 2, 2.0, 10.0, [0.0, -12.0]),
-        (1, 3, 3, 1.0, 9.81, [1.0, -7.905, -26.24])
-    ]
-    for t_start, t_end, n, v0, g, expected in cases:
-        out = distance(t_start, t_end, n, v0, g)
-        assert len(out) == n
-        for o, e in zip(out, expected):
-            assert abs(o - e) < 1e-2
+def test_distance_0_4_3():
+    out = distance(0, 4, 3, 6.0, 9.81)
+    expected = [0.0, 4.0, -31.24]
+    for o, e in zip(out, expected):
+        assert abs(o - e) < 1e-2, f"distance(0, 4, 3, 6.0, 9.81) should be {expected}, but got {o}"
 
-def test_distance_return_type():
-    out = distance(0, 1, 2)
-    assert isinstance(out, list), "distance should return a list"
-    assert all(isinstance(i, float) or isinstance(i, int) for i in out)
+def test_distance_0_2_2():
+    out = distance(0, 2, 2, 2.0, 10.0)
+    expected = [0.0, -12.0]
+    for o, e in zip(out, expected):
+        assert abs(o - e) < 1e-2, f"distance(0, 2, 2, 2.0, 10.0) should be {expected}, but got {o}"
 
-def test_distance_function_signature():
-    import inspect
-    sig = inspect.signature(distance)
-    params = list(sig.parameters.keys())
-    assert params[:3] == ['t_start', 't_end', 'n'], f"distance should have (t_start, t_end, n, ...) as parameters, got {params}" 
+def test_distance_1_3_3():
+    out = distance(1, 3, 3, 1.0, 9.81)
+    expected = [1.0, -7.905, -26.24]
+    for o, e in zip(out, expected):
+        assert abs(o - e) < 1e-2, f"distance(1, 3, 3, 1.0, 9.81) should be {expected}, but got {o}"

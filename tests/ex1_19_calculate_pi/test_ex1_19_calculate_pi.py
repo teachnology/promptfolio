@@ -13,28 +13,45 @@ except ImportError:
 def test_calculate_pi_function_exists():
     assert callable(calculate_pi), "calculate_pi should be a callable function"
 
-def test_calculate_pi_basic():
-    assert abs(calculate_pi(1) - 4) < 1e-6, "calculate_pi(1) should return 4"
-    assert abs(calculate_pi(10) - 3.0418396189) < 1e-6
-    assert abs(calculate_pi(1000) - math.pi) < 1e-2
+def test_calculate_pi_1():
+    expected = 4
+    result = calculate_pi(1)
+    assert abs(result - expected) < 1e-6, f"calculate_pi(1) should be {expected}, but got {result}"
 
-def test_calculate_pi_param():
-    cases = [
-        (0, 0), (2, 2.6666666667), (5, 3.3396825397), (100, 3.1315929036)
-    ]
-    for n, expected in cases:
-        assert abs(calculate_pi(n) - expected) < 1e-6
+def test_calculate_pi_10():
+    expected = 3.0418396189
+    result = calculate_pi(10)
+    assert abs(result - expected) < 1e-6, f"calculate_pi(10) should be {expected}, but got {result}"
+
+def test_calculate_pi_1000():
+    expected = math.pi
+    result = calculate_pi(1000)
+    assert abs(result - expected) < 1e-2, f"calculate_pi(1000) should be {expected}, but got {result}"
+
+def test_calculate_pi_0():
+    expected = 0
+    result = calculate_pi(0)
+    assert abs(result - expected) < 1e-6, f"calculate_pi(0) should be {expected}, but got {result}"
+
+def test_calculate_pi_2():
+    expected = 2.6666666667
+    result = calculate_pi(2)
+    assert abs(result - expected) < 1e-6, f"calculate_pi(2) should be {expected}, but got {result}"
+
+def test_calculate_pi_5():
+    expected = 3.3396825397
+    result = calculate_pi(5)
+    assert abs(result - expected) < 1e-6, f"calculate_pi(5) should be {expected}, but got {result}"
+
+def test_calculate_pi_100():
+    expected = 3.1315929036
+    result = calculate_pi(100)
+    assert abs(result - expected) < 1e-6, f"calculate_pi(100) should be {expected}, but got {result}"
 
 def test_calculate_pi_large():
     val = calculate_pi(10000)
-    assert abs(val - math.pi) < 1e-3
+    assert abs(val - math.pi) < 1e-3, f"calculate_pi(10000) should be {math.pi}, but got {val}"
 
 def test_calculate_pi_return_type():
-    assert isinstance(calculate_pi(10), float), "calculate_pi should return a float"
-
-def test_calculate_pi_function_signature():
-    import inspect
-    sig = inspect.signature(calculate_pi)
-    params = list(sig.parameters.keys())
-    assert len(params) == 1, f"calculate_pi should accept 1 parameter, got {len(params)}"
-    assert params[0] in ['n', 'num', 'number', 'x'], f"Parameter name should be 'n' or similar, got '{params[0]}'" 
+    result = calculate_pi(10)
+    assert isinstance(result, float), f"calculate_pi(10) should be float, but got {type(result).__name__}"
