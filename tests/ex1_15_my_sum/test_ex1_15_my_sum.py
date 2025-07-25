@@ -13,31 +13,41 @@ def test_my_sum_function_exists():
     assert callable(my_sum), "my_sum should be a callable function"
 
 def test_my_sum_1():
-    assert my_sum([1, 3, 5, -5]) == 4, "my_sum([1, 3, 5, -5]) should be 4"
+    result = my_sum([1, 3, 5, -5])
+    assert result == 4, f"my_sum([1, 3, 5, -5]) should be 4, got {result}"
 
 def test_my_sum_empty():
-    assert my_sum([]) == 0, "my_sum([]) should be 0"
+    result = my_sum([])
+    assert result == 0, f"my_sum([]) should be 0, got {result}"
 
 def test_my_sum_float():
-    assert abs(my_sum([2.1, 98, -451, 273, 1111, 23.98]) - 1057.08) < 1e-2, "my_sum([2.1, 98, -451, 273, 1111, 23.98]) should be 1057.08"
+    result = my_sum([2.1, 98, -451, 273, 1111, 23.98])
+    assert abs(result - 1057.08) < 1e-2, f"my_sum([2.1, 98, -451, 273, 1111, 23.98]) should be 1057.08, got {result}"
 
 def test_my_sum_large():
-    assert my_sum(list(range(1, 101))) == 5050, "my_sum(range(1, 101)) should be 5050"
+    result = my_sum(list(range(1, 101)))
+    assert result == 5050, f"my_sum(range(1, 101)) should be 5050, got {result}"
 
 def test_my_sum_0():
-    assert my_sum([0]) == 0, "my_sum([0]) should be 0"
+    result = my_sum([0])
+    assert result == 0, f"my_sum([0]) should be 0, got {result}"
 
 def test_my_sum_1_single():
-    assert my_sum([1]) == 1, "my_sum([1]) should be 1"
+    result = my_sum([1])
+    assert result == 1, f"my_sum([1]) should be 1, got {result}"
 
 def test_my_sum_123():
-    assert my_sum([1, 2, 3]) == 6, "my_sum([1, 2, 3]) should be 6"
+    result = my_sum([1, 2, 3])
+    assert result == 6, f"my_sum([1, 2, 3]) should be 6, got {result}"
 
 def test_my_sum_10_neg10_5():
-    assert my_sum([10, -10, 5]) == 5, "my_sum([10, -10, 5]) should be 5"
+    result = my_sum([10, -10, 5])
+    assert result == 5, f"my_sum([10, -10, 5]) should be 5, got {result}"
 
 def test_my_sum_negatives():
-    assert my_sum([-1, -2, -3]) == -6, "my_sum([-1, -2, -3]) should be -6"
+    result = my_sum([-1, -2, -3])
+    assert result == -6, f"my_sum([-1, -2, -3]) should be -6, got {result}"
 
 def test_my_sum_return_type():
-    assert isinstance(my_sum([1, 2, 3]), (int, float)), "my_sum([1, 2, 3]) should be int or float"
+    result = my_sum([1, 2, 3])
+    assert isinstance(result, (int, float)), f"my_sum([1, 2, 3]) should be int or float, got {type(result).__name__}"

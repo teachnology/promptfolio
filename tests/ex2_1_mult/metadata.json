@@ -1,0 +1,10 @@
+{
+  "id": "ex2_1_mult",
+  "title": "Multiply all elements in a list by n",
+  "description": "Write a Python function mult(vector, n) which takes a list and a number, multiplies each element in the list by n, and returns the resulting list.",
+  "hints": [
+    "Use a for loop to iterate and modify each element.",
+    "Return a new list, do not modify the input in place.",
+    "Handle empty lists correctly."
+  ]
+} 

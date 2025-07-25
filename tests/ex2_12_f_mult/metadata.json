@@ -1,0 +1,10 @@
+{
+  "id": "ex2_12_f_mult",
+  "title": "Matrix-matrix multiplication",
+  "description": "Write a Python function f_mult(A, B) that multiplies two matrices A and B and returns the result as a NumPy array.",
+  "hints": [
+    "Use nested loops or np.dot for multiplication.",
+    "Check the shapes of A and B.",
+    "Return a NumPy array."
+  ]
+} 

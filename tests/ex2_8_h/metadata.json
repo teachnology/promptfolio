@@ -1,0 +1,10 @@
+{
+  "id": "ex2_8_h",
+  "title": "Implement the Gaussian-like function h(x)",
+  "description": "Write a Python function h(x) = 1/sqrt(2*pi) * exp(-0.5*x**2).",
+  "hints": [
+    "Import sqrt, pi, and exp from the math or numpy module.",
+    "Test your function at x=0 and x=1.",
+    "Return a float value."
+  ]
+} 

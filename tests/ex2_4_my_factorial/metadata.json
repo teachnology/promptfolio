@@ -1,0 +1,10 @@
+{
+  "id": "ex2_4_my_factorial",
+  "title": "Implement the factorial function",
+  "description": "Write a Python function my_factorial(n) that returns n! using a loop. Return 1 if n is 0 or 1.",
+  "hints": [
+    "Use a for loop to multiply numbers from 1 to n.",
+    "Handle the special cases n=0 and n=1.",
+    "Do not use math.factorial directly."
+  ]
+} 

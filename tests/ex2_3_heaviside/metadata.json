@@ -1,0 +1,10 @@
+{
+  "id": "ex2_3_heaviside",
+  "title": "Implement the Heaviside step function",
+  "description": "Write a Python function heaviside(x) that returns 0 if x < 0, and 1 if x >= 0.",
+  "hints": [
+    "Use an if-else statement to check the value of x.",
+    "Return an integer (0 or 1) as specified.",
+    "Test your function with both negative and positive values."
+  ]
+} 

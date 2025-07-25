@@ -14,29 +14,36 @@ def test_num_digits_function_exists():
     assert callable(num_digits), "num_digits should be a callable function"
 
 def test_num_digits_zero():
-    assert num_digits(0) == 1, "num_digits(0) should return 1"
+    result = num_digits(0)
+    assert result == 1, f"num_digits(0) should be 1, got {result}"
 
 def test_num_digits_five():
-    assert num_digits(5) == 1, "num_digits(5) should return 1"
+    result = num_digits(5)
+    assert result == 1, f"num_digits(5) should be 1, got {result}"
 
 def test_num_digits_seventy_three():
-    assert num_digits(73) == 2, "num_digits(73) should return 2"
+    result = num_digits(73)
+    assert result == 2, f"num_digits(73) should be 2, got {result}"
 
 def test_num_digits_large_number():
-    assert num_digits(12345) == 5, "num_digits(12345) should return 5"
+    result = num_digits(12345)
+    assert result == 5, f"num_digits(12345) should be 5, got {result}"
 
 def test_num_digits_nine_nines():
-    assert num_digits(999999999) == 9, "num_digits(999999999) should return 9"
+    result = num_digits(999999999)
+    assert result == 9, f"num_digits(999999999) should be 9, got {result}"
 
 def test_num_digits_one_hundred_thousand():
-    assert num_digits(100000) == 6, "num_digits(100000) should return 6"
+    result = num_digits(100000)
+    assert result == 6, f"num_digits(100000) should be 6, got {result}"
 
 def test_num_digits_negative():
     try:
         result = num_digits(-123)
-        assert isinstance(result, int), "num_digits(-123) should return an integer or raise"
+        assert isinstance(result, int), f"num_digits(-123) should be int, got {type(result).__name__}"
     except Exception:
         pass
 
 def test_num_digits_return_type():
-    assert isinstance(num_digits(123), int), "num_digits(123) should return an integer"
+    result = num_digits(123)
+    assert isinstance(result, int), f"num_digits(123) should be int, got {type(result).__name__}"
