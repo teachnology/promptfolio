@@ -14,42 +14,45 @@ except ImportError:
 def test_gaussian_function_exists():
     assert callable(gaussian), "gaussian should be a callable function"
 
-def test_gaussian_standard():
-    result = gaussian(0)
+def test_gaussian_0():
     expected = 1 / math.sqrt(2 * math.pi)
-    assert abs(result - expected) < 1e-6, f"gaussian(0) should be {expected}, got {result}"
+    result = gaussian(0)
+    assert abs(result - expected) < 1e-6, f"gaussian(0) should be {expected}, but got {result}"
 
-def test_gaussian_non_default():
-    result = gaussian(2, m=0, s=1)
+def test_gaussian_2():
     expected = 0.0539909665
-    assert abs(result - expected) < 1e-6, f"gaussian(2,0,1) should be {expected}, got {result}"
+    result = gaussian(2, 0, 1)
+    assert abs(result - expected) < 1e-6, f"gaussian(2,0,1) should be {expected}, but got {result}"
 
 def test_gaussian_shifted_mean():
-    result = gaussian(2, m=2, s=1)
     expected = 1 / math.sqrt(2 * math.pi)
-    assert abs(result - expected) < 1e-6, f"gaussian(2,2,1) should be {expected}, got {result}"
+    result = gaussian(2, 2, 1)
+    assert abs(result - expected) < 1e-6, f"gaussian(2,2,1) should be {expected}, but got {result}"
 
 def test_gaussian_small_sigma():
-    result = gaussian(0, m=0, s=0.1)
     expected = 1 / (0.1 * math.sqrt(2 * math.pi))
-    assert abs(result - expected) < 1e-5, f"gaussian(0,0,0.1) should be {expected}, got {result}"
+    result = gaussian(0, 0, 0.1)
+    assert abs(result - expected) < 1e-5, f"gaussian(0,0,0.1) should be {expected}, but got {result}"
 
-def test_gaussian_param():
-    cases = [
-        (0, 0, 1, 1 / math.sqrt(2 * math.pi)),
-        (1, 0, 1, math.exp(-0.5) / math.sqrt(2 * math.pi)),
-        (0, 1, 1, math.exp(-0.5) / math.sqrt(2 * math.pi)),
-        (2, 0, 1, 0.0539909665),
-        (0, 0, 0.5, 1 / (0.5 * math.sqrt(2 * math.pi))),
-    ]
-    for x, m, s, expected in cases:
-        result = gaussian(x, m, s)
-        assert abs(result - expected) < 1e-6
+def test_gaussian_1():
+    expected = math.exp(-0.5) / math.sqrt(2 * math.pi)
+    result = gaussian(1, 0, 1)
+    assert abs(result - expected) < 1e-6, f"gaussian(1,0,1) should be {expected}, but got {result}"
+
+def test_gaussian_0_1_1():
+    expected = math.exp(-0.5) / math.sqrt(2 * math.pi)
+    result = gaussian(0, 1, 1)
+    assert abs(result - expected) < 1e-6, f"gaussian(0,1,1) should be {expected}, but got {result}"
+
+def test_gaussian_half_sigma():
+    expected = 1 / (0.5 * math.sqrt(2 * math.pi))
+    result = gaussian(0, 0, 0.5)
+    assert abs(result - expected) < 1e-6, f"gaussian(0,0,0.5) should be {expected}, but got {result}"
 
 def test_gaussian_negative_sigma():
     try:
         result = gaussian(0, 0, -1)
-        assert isinstance(result, float), "gaussian with negative sigma should return a float or raise"
+        assert isinstance(result, float), f"gaussian(0,0,-1) should be float, but got {type(result).__name__}"
     except (ValueError, ZeroDivisionError):
         pass
     except Exception as e:
@@ -59,8 +62,8 @@ def test_gaussian_function_signature():
     import inspect
     sig = inspect.signature(gaussian)
     params = list(sig.parameters.keys())
-    assert params == ['x', 'm', 's'], f"gaussian function should have parameters (x, m, s), got {params}"
+    assert params == ['x', 'm', 's'], "gaussian function should have parameters (x, m, s)"
 
 def test_gaussian_return_type():
     result = gaussian(0)
-    assert isinstance(result, float), f"gaussian(0) should return a float, got {type(result).__name__}" 
+    assert isinstance(result, float), f"gaussian(0) should be float, but got {type(result).__name__}" 

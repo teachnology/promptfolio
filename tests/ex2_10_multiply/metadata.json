@@ -1,0 +1,10 @@
+{
+  "id": "ex2_10_multiply",
+  "title": "Matrix-vector multiplication",
+  "description": "Write a Python function multiply(A, b) that multiplies a matrix A by a vector b and returns the result as a NumPy array.",
+  "hints": [
+    "Use nested loops or np.dot for multiplication.",
+    "Check the shapes of A and b.",
+    "Return a NumPy array."
+  ]
+} 

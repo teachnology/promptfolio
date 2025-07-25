@@ -1,0 +1,10 @@
+{
+  "id": "ex2_5_path_length",
+  "title": "Compute the length of a path from coordinates",
+  "description": "Write a Python function path_length(x, y) that computes the total length of a path given lists of x and y coordinates.",
+  "hints": [
+    "Use a for loop to sum the distances between consecutive points.",
+    "Use math.sqrt for distance calculation.",
+    "Handle the case when the input lists are empty or have one point."
+  ]
+} 

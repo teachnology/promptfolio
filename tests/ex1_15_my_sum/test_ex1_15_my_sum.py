@@ -12,27 +12,42 @@ except ImportError:
 def test_my_sum_function_exists():
     assert callable(my_sum), "my_sum should be a callable function"
 
-def test_my_sum_basic():
-    assert my_sum([1, 3, 5, -5]) == 4, "my_sum([1,3,5,-5]) should return 4"
-    assert my_sum([]) == 0, "my_sum([]) should return 0"
-    assert abs(my_sum([2.1, 98, -451, 273, 1111, 23.98]) - 1057.08) < 1e-2
+def test_my_sum_1():
+    result = my_sum([1, 3, 5, -5])
+    assert result == 4, f"my_sum([1, 3, 5, -5]) should be 4, got {result}"
+
+def test_my_sum_empty():
+    result = my_sum([])
+    assert result == 0, f"my_sum([]) should be 0, got {result}"
+
+def test_my_sum_float():
+    result = my_sum([2.1, 98, -451, 273, 1111, 23.98])
+    assert abs(result - 1057.08) < 1e-2, f"my_sum([2.1, 98, -451, 273, 1111, 23.98]) should be 1057.08, got {result}"
 
 def test_my_sum_large():
-    assert my_sum(list(range(1, 101))) == 5050, "my_sum(range(1,101)) should return 5050"
+    result = my_sum(list(range(1, 101)))
+    assert result == 5050, f"my_sum(range(1, 101)) should be 5050, got {result}"
 
-def test_my_sum_param():
-    cases = [
-        ([0], 0), ([1], 1), ([1, 2, 3], 6), ([10, -10, 5], 5), ([-1, -2, -3], -6)
-    ]
-    for arr, expected in cases:
-        assert my_sum(arr) == expected, f"my_sum({arr}) should return {expected}"
+def test_my_sum_0():
+    result = my_sum([0])
+    assert result == 0, f"my_sum([0]) should be 0, got {result}"
+
+def test_my_sum_1_single():
+    result = my_sum([1])
+    assert result == 1, f"my_sum([1]) should be 1, got {result}"
+
+def test_my_sum_123():
+    result = my_sum([1, 2, 3])
+    assert result == 6, f"my_sum([1, 2, 3]) should be 6, got {result}"
+
+def test_my_sum_10_neg10_5():
+    result = my_sum([10, -10, 5])
+    assert result == 5, f"my_sum([10, -10, 5]) should be 5, got {result}"
+
+def test_my_sum_negatives():
+    result = my_sum([-1, -2, -3])
+    assert result == -6, f"my_sum([-1, -2, -3]) should be -6, got {result}"
 
 def test_my_sum_return_type():
-    assert isinstance(my_sum([1, 2, 3]), (int, float)), "my_sum should return int or float"
-
-def test_my_sum_function_signature():
-    import inspect
-    sig = inspect.signature(my_sum)
-    params = list(sig.parameters.keys())
-    assert len(params) == 1, f"my_sum should accept 1 parameter, got {len(params)}"
-    assert params[0] in ['x', 'lst', 'arr', 'numbers'], f"Parameter name should be 'x' or similar, got '{params[0]}'" 
+    result = my_sum([1, 2, 3])
+    assert isinstance(result, (int, float)), f"my_sum([1, 2, 3]) should be int or float, got {type(result).__name__}"

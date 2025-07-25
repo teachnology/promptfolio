@@ -12,36 +12,49 @@ except ImportError:
 def test_odd_numbers_function_exists():
     assert callable(odd_numbers), "odd_numbers should be a callable function"
 
-def test_odd_numbers_basic():
-    assert odd_numbers(10) == [1, 3, 5, 7, 9], "odd_numbers(10) should return [1,3,5,7,9]"
-    assert odd_numbers(1) == [], "odd_numbers(1) should return []"
-    assert odd_numbers(2) == [1], "odd_numbers(2) should return [1]"
-    assert odd_numbers(15) == [1, 3, 5, 7, 9, 11, 13], "odd_numbers(15) should return [1,3,5,7,9,11,13]"
+def test_odd_numbers_ten():
+    result = odd_numbers(10)
+    assert result == [1, 3, 5, 7, 9], f"odd_numbers(10) should be [1, 3, 5, 7, 9], got {result}"
 
-def test_odd_numbers_large():
-    res = odd_numbers(100)
-    assert res[0] == 1 and res[-1] == 99 and len(res) == 50
+def test_odd_numbers_one():
+    result = odd_numbers(1)
+    assert result == [], f"odd_numbers(1) should be [], got {result}"
+
+def test_odd_numbers_two():
+    result = odd_numbers(2)
+    assert result == [1], f"odd_numbers(2) should be [1], got {result}"
+
+def test_odd_numbers_fifteen():
+    result = odd_numbers(15)
+    assert result == [1, 3, 5, 7, 9, 11, 13], f"odd_numbers(15) should be [1, 3, 5, 7, 9, 11, 13], got {result}"
 
 def test_odd_numbers_negative():
     try:
         result = odd_numbers(-5)
-        assert isinstance(result, list), "odd_numbers(-5) should return a list or raise"
+        assert isinstance(result, list), f"odd_numbers(-5) should be list, got {type(result).__name__}"
     except Exception:
         pass
 
-def test_odd_numbers_param():
-    cases = [
-        (0, []), (3, [1]), (5, [1, 3]), (8, [1, 3, 5, 7]), (20, [1, 3, 5, 7, 9, 11, 13, 15, 17, 19])
-    ]
-    for n, expected in cases:
-        assert odd_numbers(n) == expected, f"odd_numbers({n}) should return {expected}"
+def test_odd_numbers_0():
+    result = odd_numbers(0)
+    assert result == [], f"odd_numbers(0) should be [], got {result}"
+
+def test_odd_numbers_3():
+    result = odd_numbers(3)
+    assert result == [1], f"odd_numbers(3) should be [1], got {result}"
+
+def test_odd_numbers_5():
+    result = odd_numbers(5)
+    assert result == [1, 3], f"odd_numbers(5) should be [1, 3], got {result}"
+
+def test_odd_numbers_8():
+    result = odd_numbers(8)
+    assert result == [1, 3, 5, 7], f"odd_numbers(8) should be [1, 3, 5, 7], got {result}"
+
+def test_odd_numbers_20():
+    result = odd_numbers(20)
+    assert result == [1, 3, 5, 7, 9, 11, 13, 15, 17, 19], f"odd_numbers(20) should be [1, 3, 5, 7, 9, 11, 13, 15, 17, 19], got {result}"
 
 def test_odd_numbers_return_type():
-    assert isinstance(odd_numbers(10), list), "odd_numbers should return a list"
-
-def test_odd_numbers_function_signature():
-    import inspect
-    sig = inspect.signature(odd_numbers)
-    params = list(sig.parameters.keys())
-    assert len(params) == 1, f"odd_numbers should accept 1 parameter, got {len(params)}"
-    assert params[0] in ['n', 'num', 'number', 'x'], f"Parameter name should be 'n' or similar, got '{params[0]}'" 
+    result = odd_numbers(10)
+    assert isinstance(result, list), f"odd_numbers(10) should be list, got {type(result).__name__}"

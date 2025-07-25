@@ -1,0 +1,10 @@
+{
+  "id": "ex2_9_w_wbits",
+  "title": "Explore array slicing with NumPy",
+  "description": "Create a NumPy array w with 31 values from 0 to 3, and wbits as a slice starting from the 4th element, excluding the last, every 3rd element.",
+  "hints": [
+    "Use np.linspace to generate w.",
+    "Use array slicing syntax for wbits.",
+    "Check the shape and values of the resulting arrays."
+  ]
+} 

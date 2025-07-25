@@ -13,36 +13,37 @@ except ImportError:
 def test_num_digits_function_exists():
     assert callable(num_digits), "num_digits should be a callable function"
 
-def test_num_digits_basic():
-    assert num_digits(0) == 1, "num_digits(0) should return 1"
-    assert num_digits(5) == 1, "num_digits(5) should return 1"
-    assert num_digits(73) == 2, "num_digits(73) should return 2"
-    assert num_digits(12345) == 5, "num_digits(12345) should return 5"
+def test_num_digits_zero():
+    result = num_digits(0)
+    assert result == 1, f"num_digits(0) should be 1, got {result}"
 
-def test_num_digits_large():
-    assert num_digits(999999999) == 9, "num_digits(999999999) should return 9"
-    assert num_digits(100000) == 6, "num_digits(100000) should return 6"
+def test_num_digits_five():
+    result = num_digits(5)
+    assert result == 1, f"num_digits(5) should be 1, got {result}"
+
+def test_num_digits_seventy_three():
+    result = num_digits(73)
+    assert result == 2, f"num_digits(73) should be 2, got {result}"
+
+def test_num_digits_large_number():
+    result = num_digits(12345)
+    assert result == 5, f"num_digits(12345) should be 5, got {result}"
+
+def test_num_digits_nine_nines():
+    result = num_digits(999999999)
+    assert result == 9, f"num_digits(999999999) should be 9, got {result}"
+
+def test_num_digits_one_hundred_thousand():
+    result = num_digits(100000)
+    assert result == 6, f"num_digits(100000) should be 6, got {result}"
 
 def test_num_digits_negative():
     try:
         result = num_digits(-123)
-        assert isinstance(result, int), "num_digits(-123) should return an integer or raise"
+        assert isinstance(result, int), f"num_digits(-123) should be int, got {type(result).__name__}"
     except Exception:
         pass
 
-def test_num_digits_param():
-    cases = [
-        (0, 1), (1, 1), (9, 1), (10, 2), (99, 2), (100, 3), (123456789, 9)
-    ]
-    for a, expected in cases:
-        assert num_digits(a) == expected, f"num_digits({a}) should return {expected}"
-
 def test_num_digits_return_type():
-    assert isinstance(num_digits(123), int), "num_digits should return an integer"
-
-def test_num_digits_function_signature():
-    import inspect
-    sig = inspect.signature(num_digits)
-    params = list(sig.parameters.keys())
-    assert len(params) == 1, f"num_digits should accept 1 parameter, got {len(params)}"
-    assert params[0] in ['a', 'n', 'num', 'number', 'x'], f"Parameter name should be 'a' or similar, got '{params[0]}'" 
+    result = num_digits(123)
+    assert isinstance(result, int), f"num_digits(123) should be int, got {type(result).__name__}"

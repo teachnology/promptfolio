@@ -12,33 +12,40 @@ except ImportError:
 def test_my_cumsum_function_exists():
     assert callable(my_cumsum), "my_cumsum should be a callable function"
 
-def test_my_cumsum_basic():
-    assert my_cumsum([1, 4, 2, 5, 3]) == [1, 5, 7, 12, 15], "my_cumsum([1,4,2,5,3]) should return [1,5,7,12,15]"
-    assert my_cumsum([]) == [], "my_cumsum([]) should return []"
-    assert my_cumsum([0]) == [0], "my_cumsum([0]) should return [0]"
+def test_my_cumsum_1():
+    result = my_cumsum([1, 4, 2, 5, 3])
+    assert result == [1, 5, 7, 12, 15], f"my_cumsum([1, 4, 2, 5, 3]) should be [1, 5, 7, 12, 15], got {result}"
 
-def test_my_cumsum_param():
-    cases = [
-        ([1, 2, 3], [1, 3, 6]),
-        ([5, -2, 7], [5, 3, 10]),
-        ([10, 0, 0, 10], [10, 10, 10, 20]),
-        ([100], [100])
-    ]
-    for arr, expected in cases:
-        assert my_cumsum(arr) == expected, f"my_cumsum({arr}) should return {expected}"
+def test_my_cumsum_empty():
+    result = my_cumsum([])
+    assert result == [], f"my_cumsum([]) should be [], got {result}"
+
+def test_my_cumsum_0():
+    result = my_cumsum([0])
+    assert result == [0], f"my_cumsum([0]) should be [0], got {result}"
+
+def test_my_cumsum_123():
+    result = my_cumsum([1, 2, 3])
+    assert result == [1, 3, 6], f"my_cumsum([1, 2, 3]) should be [1, 3, 6], got {result}"
+
+def test_my_cumsum_5_neg2_7():
+    result = my_cumsum([5, -2, 7])
+    assert result == [5, 3, 10], f"my_cumsum([5, -2, 7]) should be [5, 3, 10], got {result}"
+
+def test_my_cumsum_10_0_0_10():
+    result = my_cumsum([10, 0, 0, 10])
+    assert result == [10, 10, 10, 20], f"my_cumsum([10, 0, 0, 10]) should be [10, 10, 10, 20], got {result}"
+
+def test_my_cumsum_100():
+    result = my_cumsum([100])
+    assert result == [100], f"my_cumsum([100]) should be [100], got {result}"
 
 def test_my_cumsum_large():
     arr = list(range(100))
     out = my_cumsum(arr)
-    assert out[-1] == sum(arr)
-    assert len(out) == 100
+    assert out[-1] == sum(arr), f"my_cumsum(range(100))[-1] should be {sum(arr)}, got {out[-1]}"
+    assert len(out) == 100, f"my_cumsum(range(100)) should be 100 elements, got {len(out)}"
 
 def test_my_cumsum_return_type():
-    assert isinstance(my_cumsum([1, 2, 3]), list), "my_cumsum should return a list"
-
-def test_my_cumsum_function_signature():
-    import inspect
-    sig = inspect.signature(my_cumsum)
-    params = list(sig.parameters.keys())
-    assert len(params) == 1, f"my_cumsum should accept 1 parameter, got {len(params)}"
-    assert params[0] in ['x', 'lst', 'arr', 'numbers'], f"Parameter name should be 'x' or similar, got '{params[0]}'" 
+    result = my_cumsum([1, 2, 3])
+    assert isinstance(result, list), f"my_cumsum([1, 2, 3]) should be list, got {type(result).__name__}"

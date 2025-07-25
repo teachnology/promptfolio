@@ -1,0 +1,10 @@
+{
+  "id": "ex2_13_odd_bits",
+  "title": "2D array slicing with odd numbers",
+  "description": "Create a 1D NumPy array odd with odd numbers from 1 to 55, a 4x7 matrix odd_sq, and a slice odd_bits as described.",
+  "hints": [
+    "Use np.arange to generate odd numbers.",
+    "Use reshape for odd_sq.",
+    "Use slicing for odd_bits."
+  ]
+} 
