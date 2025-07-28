@@ -1,1 +1,4 @@
-Expand the feedback
+Please expand the following feedback from a teacher:
+===
+{{content}}
+===
