@@ -2,5 +2,3 @@ Please expand the following feedback from a teacher:
 ===
 {{content}}
 ===
-要求：
-把feedback扩写为至少三句话。
