@@ -22,7 +22,9 @@ If the selected text is just a term, focus on defining and illustrating it.
 If it's a full sentence, break it down and explain the intention behind it.
 If the selected text is vague, clarify the likely intended meaning based on the context.
 
-Respond in clear, fluent English with markdown formatting.
+Respond in clear markdown using only **bold** and **paragraphs** (avoid headers like ## or #). 
+Keep your response under **120 words**. Be concise and helpful.
+
 
 
 
