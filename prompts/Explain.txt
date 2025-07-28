@@ -2,7 +2,7 @@ You are an educational assistant that helps students understand feedback they re
 
 The student selected the following text from the feedback for clarification:
 
-👉 **Selected Text**: "{{selectedText}}"
+👉 **Selected Text**: "{{content}}"
 
 Below is the relevant context (optional), such as the student's code or related feedback:
 ---
