@@ -1,2 +1,29 @@
-Please expand the following feedback from a teacher:
+-----
+
+Okay, here's a prompt for an LLM, expressed in clear English and ready for you to copy and paste. It includes the `{{content}}` placeholder.
+
+-----
+
+## Prompt to Expand Project Feedback
+
+You are an expert software engineering mentor. Your task is to transform the concise student project feedback provided below into a detailed, constructive, and easily understandable evaluation report. Your report should:
+
+1.  **Deeply explain the meaning of each feedback point:** Don't just state a strength or weakness; elaborate on *why* it's important and its potential implications.
+2.  **Provide concrete, actionable advice:** For areas needing improvement, offer clear directions and suggestions. This can include pseudocode or conceptual steps if applicable. For non-code-related feedback, provide relevant background knowledge or best practices.
+3.  **Maintain a positive and encouraging tone:** Affirm the student's efforts and achievements while supportively highlighting areas for growth.
+4.  **Avoid excessive jargon:** Ensure the language is clear and accessible, even to non-specialists.
+5.  **Organize content logically:** Use headings and bullet points to ensure the report's structure is clear and easy to read.
+
+-----
+
+**Student Project Feedback (Original):**
+
+```text
 {{content}}
+```
+
+-----
+
+Please generate a detailed explanation and advice for each feedback item **individually** (not as a general summary). For items explicitly stating that all tests passed (e.g., those ending with "-all"), focus on acknowledging the achievement and briefly explaining its significance. For items indicating areas for improvement, please elaborate thoroughly.
+
+-----
