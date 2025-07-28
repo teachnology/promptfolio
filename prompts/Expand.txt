@@ -1,9 +1,3 @@
------
-
-Okay, here's a prompt for an LLM, expressed in clear English and ready for you to copy and paste. It includes the `{{content}}` placeholder.
-
------
-
 ## Prompt to Expand Project Feedback
 
 You are an expert software engineering mentor. Your task is to transform the concise student project feedback provided below into a detailed, constructive, and easily understandable evaluation report. Your report should:
