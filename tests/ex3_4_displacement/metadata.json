@@ -1,0 +1,11 @@
+{
+  "id": "ex3_4_displacement",
+  "title": "Exercise 3.4: Displacement function with validation",
+  "description": "Implement displacement(t, v0, g=9.81) returning v0*t - 0.5*g*t^2 and raise ValueError for negative t or v0.",
+  "hints": [
+    "Use the formula y(t) = v0*t - 0.5*g*t**2.",
+    "Validate inputs: t and v0 must be non-negative.",
+    "Support keyword arguments and return a numeric value."
+  ]
+}
+
