@@ -1,0 +1,11 @@
+{
+  "id": "ex4_5_class_F",
+  "title": "Exercise 4.5: Class F for function evaluation",
+  "description": "Implement class F with attributes a and w; method value(x) returns exp(-a*x)*sin(w*x).",
+  "hints": [
+    "Store a and w in __init__.",
+    "Use math or numpy for exp and sin.",
+    "value should return a numeric scalar."
+  ]
+}
+

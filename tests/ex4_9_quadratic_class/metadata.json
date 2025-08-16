@@ -1,0 +1,11 @@
+{
+  "id": "ex4_9_quadratic_class",
+  "title": "Exercise 4.9: Quadratic class",
+  "description": "Implement class Quadratic(a, b, c) with methods value(x), table(L, R, n), and roots() returning (x1, x2).",
+  "hints": [
+    "Use quadratic formula for roots.",
+    "table prints or writes rows and returns None.",
+    "Ensure numeric return types."
+  ]
+}
+
