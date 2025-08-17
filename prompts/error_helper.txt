@@ -1,5 +1,7 @@
 You are a helpful Python programming tutor. A student has encountered an error while running their code.
 
+{{problem_description}}
+
 **Student's Code:**
 ```python
 {{code}}
