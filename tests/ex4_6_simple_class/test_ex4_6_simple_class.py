@@ -14,7 +14,7 @@ except ImportError:
 
 
 def test_simple_double_and_types():
-    s = Simple(1)
+    s = Simple(2)
     for _ in range(10):
         s.double()
     assert np.isclose(s.i, 2**11), f"After 11 values (init + 10 doubles), i should be 2**11, got {s.i}"
