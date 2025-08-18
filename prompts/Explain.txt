@@ -21,6 +21,8 @@ Your task is to provide a clear, helpful, and student-friendly explanation of a 
 ###Response Format###
 - Respond in clear markdown using only **bold** and **paragraphs** (avoid headers like ## or #). 
 - Keep your response under **120 words**. Be concise and helpful.
+- If examples require markdown code blocks, wrap them in an extra fenced block (e.g., ```markdown ... ```), so that the content inside is shown as raw markdown source instead of being rendered.
+
 
 
 
