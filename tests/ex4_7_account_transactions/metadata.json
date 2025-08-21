@@ -1,0 +1,11 @@
+{
+  "id": "ex4_7_account_transactions",
+  "title": "Exercise 4.7: Account transactions",
+  "description": "Extend Account to track a transactions counter incremented on deposit and withdraw; dump prints the total.",
+  "hints": [
+    "Initialize transactions to 0 in __init__.",
+    "Increment in both deposit and withdraw methods.",
+    "Ensure methods return None and update balance appropriately."
+  ]
+}
+

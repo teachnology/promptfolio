@@ -1,0 +1,11 @@
+{
+  "id": "ex3_5_my_factorial",
+  "title": "Exercise 3.5: Factorial with exception handling",
+  "description": "Implement my_factorial(n) that returns n! for n >= 0 and raises ValueError for negative n.",
+  "hints": [
+    "Handle special cases: 0! = 1 and 1! = 1.",
+    "Use a loop to multiply integers from 2 to n.",
+    "Raise ValueError when n < 0."
+  ]
+}
+

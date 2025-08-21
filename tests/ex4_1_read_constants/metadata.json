@@ -1,0 +1,11 @@
+{
+  "id": "ex4_1_read_constants",
+  "title": "Exercise 4.1: Make a dictionary from a table",
+  "description": "Implement read_constants(file_path) to parse data/constants.txt into a dict mapping constant name to numeric value.",
+  "hints": [
+    "Skip header lines and split columns by whitespace.",
+    "Name may contain spaces; value is the numeric column.",
+    "Return a dictionary with 8 entries."
+  ]
+}
+

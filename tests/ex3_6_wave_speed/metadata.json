@@ -1,0 +1,11 @@
+{
+  "id": "ex3_6_wave_speed",
+  "title": "Exercise 3.6: Wave speeds",
+  "description": "Implement compute_wave_speeds(k, mu, rho) returning (Vp, Vs) with Vp=sqrt((k+4*mu/3)/rho) and Vs=sqrt(mu/rho), raising ValueError for non-physical inputs.",
+  "hints": [
+    "Use math.sqrt for the square roots.",
+    "Inputs k, mu, rho must be positive; density cannot be negative or zero.",
+    "Return two numbers: (Vp, Vs)."
+  ]
+}
+

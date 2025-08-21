@@ -1,0 +1,11 @@
+{
+  "id": "ex3_8_read_temp_density",
+  "title": "Exercise 3.8: Read temperature-density data",
+  "description": "Implement readTempDenFile(filename) to return (temperatures, densities) lists and create temp_air_list, dens_air_list, temp_water_list, dens_water_list.",
+  "hints": [
+    "Skip lines starting with # and blank lines.",
+    "Split by whitespace and convert the two columns to floats.",
+    "Return two lists and also populate the four global lists."
+  ]
+}
+
