@@ -20,7 +20,7 @@ Your task is to provide a clear, helpful, and student-friendly explanation of a 
 
 ###Response Format###
 - Respond in clear markdown using only **bold** and **paragraphs** (avoid headers like ## or #). 
-- Keep your response under **120 words**. Be concise and helpful.
+- Keep your response under **200 words**. Be concise and helpful.
 
 
 
