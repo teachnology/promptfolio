@@ -1,0 +1,10 @@
+{
+  "id": "ex1_19_calculate_pi",
+  "title": "Calculate pi using the Gregory-Leibniz series",
+  "description": "Write a Python function `calculate_pi(n)` that uses the Gregory-Leibniz series to approximate pi. Use list comprehensions for the first three steps, and your own my_sum function to sum the series.",
+  "hints": [
+    "Generate the first n odd numbers using a list comprehension.",
+    "Create a list of alternating signs [1, -1, 1, -1, ...].",
+    "Sum the series and multiply by 4 to get the approximation of pi."
+  ]
+} 

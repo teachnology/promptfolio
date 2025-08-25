@@ -1,0 +1,10 @@
+{
+  "id": "ex2_6_approx_pi",
+  "title": "Approximate pi using a polygonal path",
+  "description": "Write a Python function approx_pi(n) that approximates pi by summing the lengths of a polygon inscribed in a circle.",
+  "hints": [
+    "Generate n+1 points on the circle using cosine and sine.",
+    "Use your path_length function to sum the side lengths.",
+    "Test with large n for better accuracy."
+  ]
+} 

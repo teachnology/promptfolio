@@ -1,0 +1,10 @@
+{
+  "id": "ex1_11_num_digits",
+  "title": "Compute the number of digits in a positive integer",
+  "description": "Write a Python function `num_digits(a)` that uses a while loop to compute how many decimal digits are needed to write a positive integer a.",
+  "hints": [
+    "Use a while loop to repeatedly divide the number by 10.",
+    "Remember to handle the case when a is 0.",
+    "Return the count of digits as an integer."
+  ]
+} 

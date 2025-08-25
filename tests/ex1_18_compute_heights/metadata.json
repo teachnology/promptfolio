@@ -1,0 +1,10 @@
+{
+  "id": "ex1_18_compute_heights",
+  "title": "Bouncing ball heights",
+  "description": "Write a function `compute_heights` that returns a list of the maximum heights of the ball after each bounce, until either n bounces or the height falls below h1. The function should take h_0, h_1, n as keyword arguments, with defaults 1.0, 0.3, 10.",
+  "hints": [
+    "Use a loop to simulate each bounce.",
+    "Stop if the height falls below h1 before n bounces.",
+    "Include the initial height in the result."
+  ]
+} 

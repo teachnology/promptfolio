@@ -20,6 +20,9 @@ You are a Python teaching assistant for programming beginners. Given the uploade
 **Hidden-test analysis**
 {{hidden_tests}}
 
+**Observed Output**
+{{code_output}}
+
 ---
 ### What you must do
 1. **Classify the submission type**  

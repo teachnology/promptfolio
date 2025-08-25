@@ -1,0 +1,11 @@
+{
+  "id": "ex4_8_line_class",
+  "title": "Exercise 4.8: Line class",
+  "description": "Implement class Line(p0, p1) with attributes p0 and p1; method value(x) returns y=a*x+b or None if vertical.",
+  "hints": [
+    "Compute a, b from two points unless x1==x0.",
+    "Return None for vertical lines.",
+    "value should return a numeric scalar."
+  ]
+}
+

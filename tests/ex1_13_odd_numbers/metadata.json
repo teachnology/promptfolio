@@ -1,0 +1,10 @@
+{
+  "id": "ex1_13_odd_numbers",
+  "title": "Store odd numbers in a list",
+  "description": "Write a Python function `odd_numbers(n)` that uses a while-loop, and generates and returns a list of all odd numbers from 1 to n.",
+  "hints": [
+    "Use a while loop and check if the current number is odd.",
+    "Remember to start from 1 and increment by 2.",
+    "If n is even, the largest odd number should be n-1."
+  ]
+} 

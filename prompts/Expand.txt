@@ -4,7 +4,7 @@ The final response must be:
 - Clean, concise, and well-structured in **Markdown**.
 - Without any extra headers, titles, or introductory/concluding text.
 - No text other than the expanded feedback content.
-- **Total length limit**: The whole output must be within **300 words**.
+- **Total length limit**: The whole output must be within **500 words**.
 
 Your task:
 
@@ -52,5 +52,5 @@ Your task:
 ## **(Optional) Student's Related Code:**
 {{code}}
 
-**(Optional) Student's Related Explanation:**
+## **(Optional) Student's Related Explanation:**
 {{explanation}}

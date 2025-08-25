@@ -1,0 +1,10 @@
+{
+  "id": "ex2_7_prime_list",
+  "title": "Generate a list of prime numbers up to n",
+  "description": "Write a Python function prime_list(n) that returns a list of all prime numbers up to n.",
+  "hints": [
+    "Use the Sieve of Eratosthenes algorithm.",
+    "Return an empty list if n < 2.",
+    "Test your function with small and large n."
+  ]
+} 

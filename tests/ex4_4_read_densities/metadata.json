@@ -1,0 +1,11 @@
+{
+  "id": "ex4_4_read_densities",
+  "title": "Exercise 4.4: Improve a program (densities)",
+  "description": "Implement read_densities_join(filename) and read_densities_substrings(filename) to parse data/densities.dat into dict with underscores in multiword names.",
+  "hints": [
+    "In join version, join all tokens except the last as the name.",
+    "In substrings version, split using fixed-width columns and strip spaces.",
+    "Replace internal spaces with underscores (e.g., Earth_core)."
+  ]
+}
+

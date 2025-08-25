@@ -1,0 +1,10 @@
+{
+  "id": "ex2_11_f_cubic",
+  "title": "Vectorised function on a 2D array",
+  "description": "Write a Python function f_cubic(A) that computes A**3 + A*exp(A) + 1 for each element in a 2D array A.",
+  "hints": [
+    "Use numpy operations for element-wise computation.",
+    "Test with small 2D arrays.",
+    "Return a NumPy array of the same shape."
+  ]
+} 

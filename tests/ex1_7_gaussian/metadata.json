@@ -1,0 +1,10 @@
+{
+  "id": "ex1_7_gaussian",
+  "title": "Implement a Gaussian function",
+  "description": "Write a Python function `gaussian` to compute the Gaussian function: f(x) = 1/(s*sqrt(2*pi)) * exp(-0.5*((x-m)/s)**2)",
+  "hints": [
+    "Remember to import pi and exp from the math module.",
+    "Pay attention to the default values for m and s.",
+    "Check your formula for the Gaussian function carefully."
+  ]
+} 

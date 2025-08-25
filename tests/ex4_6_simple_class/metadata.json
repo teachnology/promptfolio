@@ -1,0 +1,11 @@
+{
+  "id": "ex4_6_simple_class",
+  "title": "Exercise 4.6: Simple class",
+  "description": "Implement class Simple with attribute i, method double() that doubles i, and proper __init__.",
+  "hints": [
+    "Store i in __init__.",
+    "double should update i in place and return None.",
+    "i should be numeric."
+  ]
+}
+

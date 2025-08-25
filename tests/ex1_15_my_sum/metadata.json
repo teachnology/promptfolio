@@ -1,0 +1,10 @@
+{
+  "id": "ex1_15_my_sum",
+  "title": "Implement the sum function",
+  "description": "Implement your own version of the sum function and name it `my_sum`. It should take a list as an argument and compute the sum of the elements in the list.",
+  "hints": [
+    "Use a for loop to iterate through the list and accumulate the sum.",
+    "Return 0 for an empty list.",
+    "Do not use the built-in sum function."
+  ]
+} 

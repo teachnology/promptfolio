@@ -1,0 +1,10 @@
+{
+  "id": "ex1_17_my_cumsum",
+  "title": "Cumulative sum of a list",
+  "description": "Write a function `my_cumsum` that returns a list whose i-th element is the sum of the input list up to and including the i-th element.",
+  "hints": [
+    "Use a loop to accumulate the sum step by step.",
+    "Return a list of the same length as the input.",
+    "Handle empty lists correctly."
+  ]
+} 

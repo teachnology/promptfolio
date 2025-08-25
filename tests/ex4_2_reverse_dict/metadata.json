@@ -1,0 +1,11 @@
+{
+  "id": "ex4_2_reverse_dict",
+  "title": "Exercise 4.2: Reverse a dictionary",
+  "description": "Implement reverse_dict(dictionary) using dictionary comprehension to swap keys and values.",
+  "hints": [
+    "Use {v: k for k, v in dictionary.items()}",
+    "Assume values are unique so they can become keys.",
+    "Return a new dict."
+  ]
+}
+
