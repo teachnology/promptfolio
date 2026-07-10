@@ -9,6 +9,10 @@
 
 {{code_output}}
 
+### Course Materials
+Here are some relevant course materials that might help the student:
+{{rag_context}}
+
 **Your Task:**
 Provide ONE accurate classification with brief explanation. Follow this exact process:
 

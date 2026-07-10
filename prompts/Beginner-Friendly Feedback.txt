@@ -20,6 +20,10 @@ You are a Python teaching assistant for programming beginners. Given the uploade
 **Hidden-test analysis**
 {{hidden_tests}}
 
+### Course Materials
+Here are some relevant course materials that might help the student:
+{{rag_context}}
+
 ---
 ### What you must do
 1. **Classify the submission type**  

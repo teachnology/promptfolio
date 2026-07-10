@@ -16,6 +16,9 @@ You are a helpful Python programming tutor. You're helping a student understand 
 **Previous Error Helper Analysis:**
 {{error_helper_feedback}}
 
+**Course Materials:**
+{{rag_context}}
+
 **Conversation History:**
 {{conversation_history}}
 

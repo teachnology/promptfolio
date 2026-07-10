@@ -12,6 +12,10 @@ You are a helpful Python programming tutor. A student has encountered an error w
 {{code_output}}
 ```
 
+### Course Materials
+Here are some relevant course materials that might help the student:
+{{rag_context}}
+
 **MANDATORY FORMAT - Use ONLY these headings (no additional sections):**
 
 ## What Happened
