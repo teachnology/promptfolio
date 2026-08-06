@@ -13,6 +13,9 @@
 Here are some relevant course materials that might help the student:
 {{rag_context}}
 
+### Previous Attempts
+{{submission_history}}
+
 **Your Task:**
 Provide ONE accurate classification with brief explanation. Follow this exact process:
 
