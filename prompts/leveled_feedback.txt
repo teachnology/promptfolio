@@ -16,6 +16,8 @@ Here are some relevant course materials that might help the student:
 ### Previous Attempts
 {{submission_history}}
 
+{{scaffolding_instructions}}
+
 **Your Task:**
 Provide ONE accurate classification with brief explanation. Follow this exact process:
 
@@ -26,15 +28,22 @@ FIRST check execution status:
 - Code runs but uses wrong algorithm/approach → 🏗️ STRATEGIC or 💡 CONCEPTUAL
 - Code works perfectly and meets all stated requirements → ✅ EXCELLENT
 
-**Step 2: Response Format**
-Write exactly: [EMOJI] [LEVEL] - [one clear sentence]. [optional: one focused question]
+**Step 2: Follow the Scaffolding Instructions above** to determine:
+- The word limit for your response
+- The depth of explanation to provide
+- Whether to include pseudocode hints or Socratic questions
+- If no scaffolding instructions are provided, default to ≤ 80 words.
+
+**Step 3: Response Format**
+Write exactly: [EMOJI] [LEVEL] - [explanation following scaffolding tier]. [optional: one focused question]
+If previous attempts exist, start by briefly acknowledging progress or persistence.
 
 **Critical Classification Rules:**
 - ANY execution error (NameError, SyntaxError, etc.) = 🚨 TARGETED (never TACTICAL)
 - Algorithm correct but wrong parameters/function calls = 🤔 TACTICAL
 - Only use ✅ EXCELLENT when output perfectly matches ALL problem requirements
-- Keep response under 80 words total
-- Never provide code solutions
+- Follow the word limit from the Scaffolding Instructions strictly
+- Never provide full code solutions
 
 **Examples:**
 

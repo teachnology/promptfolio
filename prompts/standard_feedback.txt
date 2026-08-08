@@ -30,6 +30,8 @@ Here are some relevant course materials that might help the student:
 ### Previous Attempts
 {{submission_history}}
 
+{{scaffolding_instructions}}
+
 ---
 ### What you must do
 1. **Classify the submission type**  
@@ -40,11 +42,11 @@ Here are some relevant course materials that might help the student:
    **Decision order (short-circuit):** BROKEN → FAILING → IMPROPER → EXCELLENT.
    (Example: If all tests pass and an approach violation exists, choose IMPROPER, not EXCELLENT.)
 
-2. **Adapt feedback depth based on attempt number**
-   - **1st attempt**: Give a brief directional hint (≤ 80 words). Point at the category of mistake without over-explaining.
-   - **2nd attempt**: Be slightly more specific (≤ 100 words). Reference what was wrong last time if the same issue persists.
-   - **3rd+ attempt**: Provide a more detailed explanation (≤ 120 words). If the student repeats the same mistake, explicitly name the concept they are missing and give a concrete example or pseudocode hint (but never the full solution).
-   - For **any EXCELLENT** submission: keep it short and positive regardless of attempt number.
+2. **Follow the Scaffolding Instructions above** to determine:
+   - The word limit for your response
+   - The depth of explanation to provide
+   - Whether to include pseudocode hints or Socratic questions
+   - If no scaffolding instructions are provided (first-time use), default to DIRECTION tier (≤ 80 words, brief directional hint).
 
 3. **Craft the reply**
    Write several clear sentences:
@@ -52,6 +54,7 @@ Here are some relevant course materials that might help the student:
    (b) If previous attempts exist, briefly acknowledge progress or persistence (e.g., "Good progress!" or "Still the same issue as before —")
    (c) The main concrete issue (or, for EXCELLENT, a brief positive confirmation + optional tiny improvement hint)
    (d) A constructive next action (how to fix / improve) without giving a full solution.
+   (e) For GUIDED/DETAILED tiers: include pseudocode hints or step-by-step structure as instructed.
 
    If BROKEN: Point out the primary blocking error (e.g. "missing colon after function definition", "NameError for math because module not imported").
    If FAILING: Focus on the first or most fundamental logic gap (e.g. mishandling of zero, negative numbers, boundary in loop).
@@ -73,4 +76,4 @@ Never output IMPROPER if an execution error exists or F > 0.
 * If all tests pass then **don't** choose **FAILING**.
 * Do **not** reveal hidden-test data and provide full code solutions.  
 * Never Mention multiple levels; output only one line.  
-* Adapt word limit based on attempt number as described above.
+* Follow the word limit from the Scaffolding Instructions strictly.
